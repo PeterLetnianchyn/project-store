@@ -5,6 +5,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background:
 
 .mat-flat-button.mat-primary, .primary-button{
     background-color: #17AD53;
+    position: inherit;
 }
 
 .d-row{
