@@ -7,12 +7,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { HeaderComponent } from './components/header/header.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
+import { DiscountPipe } from './pipes/discount/discount.pipe';
+import { CurrencyPipe } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    DiscountPipe,
   ],
   imports: [
     BrowserModule,
@@ -20,7 +23,7 @@ import { ProductCardComponent } from './components/product-card/product-card.com
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [CurrencyPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
