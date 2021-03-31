@@ -1,0 +1,18 @@
+<mat-card class="product-card">
+    <mat-card-header>
+      <mat-card-title>{{product.name}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="product.img" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+        <div class="d-row j-betwen">
+            <div class="d-column">
+                <label>Category: <strong>{{product.category}}</strong></label>
+                <label>Price: <strong>{{product.salePrice ? product.salePrice : product.price}}</strong></label>
+            </div>
+            <div>
+                <button mat-flat-button class="primary-button" color="primary" (click)="addToCard(product)">Add to card</button>
+<!--                 <button mat-flat-button color="warn">Warn</button> -->
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

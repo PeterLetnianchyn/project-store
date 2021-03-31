@@ -1,4 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background: #E5E5E5;}
+
+.mat-flat-button.mat-primary, .primary-button{
+    background-color: #17AD53;
+}
+
+.d-row{
+    display: flex;
+    flex-direction: row;
+} 
+
+.d-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.j-betwen{
+    justify-content: space-between;
+}
