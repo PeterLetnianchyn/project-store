@@ -1,0 +1,23 @@
+:host{
+    position: sticky;
+}
+
+.toolbar{
+    height: 6.625rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #409A64;
+  }
+
+  .nav-button{
+    padding: 1rem;
+    font-size: 1.25rem;
+  }
+
+  .icon{
+    padding: 0;
+  }
