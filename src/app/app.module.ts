@@ -9,6 +9,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { DiscountPipe } from './pipes/discount/discount.pipe';
 import { CurrencyPipe } from '@angular/common';
+import { ProductListComponent } from './components/product-list/product-list.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { CurrencyPipe } from '@angular/common';
     HeaderComponent,
     ProductCardComponent,
     DiscountPipe,
+    ProductListComponent,
   ],
   imports: [
     BrowserModule,
