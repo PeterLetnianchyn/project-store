@@ -1,4 +1,4 @@
-<mat-card class="product-card">
+<mat-card class="product-card" *ngIf="product">
     <mat-card-header>
       <mat-card-title>{{product.name}}</mat-card-title>
     </mat-card-header>
@@ -10,9 +10,9 @@
                 <label>Price: <strong>{{product.salePrice ? product.salePrice : product.price | currency: 'USD'}}</strong></label>
                 <label *ngIf="product.brand">Sale: <strong>{{(product.salePrice | discount: product.price) | percent: '0.1'}}</strong></label>
             </div>
-            <div>
+            <div class="control-buttons">
                 <button mat-flat-button class="primary-button" color="primary" (click)="addToCard(product)">Add to card</button>
-<!--                 <button mat-flat-button color="warn">Warn</button> -->
+                <button mat-flat-button color="warn" (click)="this.deleteProduct(product)">Delete</button>
             </div>
         </div>
     </mat-card-content>

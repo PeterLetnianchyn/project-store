@@ -4,7 +4,7 @@
       <button mat-button class="nav-button" aria-label="">
         All items
       </button>
-      <button mat-button class="nav-button" aria-label="">
+      <button mat-button class="nav-button" aria-label=""  [matBadge]="cartService.cart.length" matBadgePosition="after" matBadgeColor="accent">
         Cart
       </button>
       <button mat-button class="nav-button" aria-label="">

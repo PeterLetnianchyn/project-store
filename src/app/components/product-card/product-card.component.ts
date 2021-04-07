@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Product } from '../../core/models/product.model';
+import { CartService } from '../../core/services/cart/cart.service';
 
 @Component({
   selector: 'app-product-card',
@@ -7,26 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductCardComponent implements OnInit {
 
-  product = {
-    id: 1,
-    name: 'Tesla model X',
-    description: 'Best Car Ever',
-    stats: {},
-    category: 'Car',
-    brand: 'Tesla',
-    img: 'https://cdcssl.ibsrv.net/autodata/images/?IMG=USC60TSS011C021001.JPG&WIDTH=1200',
-    price: 1000,
-    salePrice: 933,
-    status: 'in stock',
-    dateCreated: new Date()
-  };
-  constructor() { }
+  @Input() product?: Product;
+  @Output() deleteClicked = new EventEmitter<any>();
+  constructor(private cartService: CartService) {
+   }
 
   ngOnInit(): void {
   }
 
-  addToCard(product: any): void {
+  addToCard(product: Product): void {
     console.log('This product', product , 'Will be added to cart');
+    this.cartService.cart.push(product);
+  }
+
+  deleteProduct(product: Product): void {
+    this.deleteClicked.emit(product);
   }
 
 }
