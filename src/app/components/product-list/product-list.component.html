@@ -1,1 +1,6 @@
-<app-product-card *ngFor="let item of [0,0,0,0,0,0,0,0,0,]"></app-product-card>
+<div class="product-list">
+    <div class="product" *ngFor="let item of products; let i = index" (click)="consoleElementWithIndex(item, i)">
+        <app-product-card *ngIf="item.inStock"></app-product-card>
+    </div>
+    
+</div>

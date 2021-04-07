@@ -9,14 +9,14 @@ export class ProductCardComponent implements OnInit {
 
   product = {
     id: 1,
-    name: 'APPLE iPhone 12 Pro Max',
-    description: 'Best Device Ever',
+    name: 'Tesla model X',
+    description: 'Best Car Ever',
     stats: {},
-    category: 'Mobile Phones',
-    brand: 'Apple',
-    img: 'https://i.eldorado.ua/goods_images/1038946/6792883-1602620087.jpg',
+    category: 'Car',
+    brand: 'Tesla',
+    img: 'https://cdcssl.ibsrv.net/autodata/images/?IMG=USC60TSS011C021001.JPG&WIDTH=1200',
     price: 1000,
-    salePrice: 950,
+    salePrice: 933,
     status: 'in stock',
     dateCreated: new Date()
   };
